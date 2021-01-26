@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 20:41:16 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/26 21:07:01 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/01/26 21:13:36 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,6 @@ int		ft_usage(const char *message, const char *name);
 */
 
 int		ft_atoi(const char *str);
-char	*ft_strchr(const char *str, char chr);
+char	*ft_strchr(const char *str, int chr);
 
 #endif

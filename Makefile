@@ -6,11 +6,11 @@
 #    By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/26 15:40:02 by vfurmane          #+#    #+#              #
-#    Updated: 2021/01/26 21:07:25 by vfurmane         ###   ########.fr        #
+#    Updated: 2021/01/26 21:13:16 by vfurmane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		= $(addprefix srcs/, calcul.c main.c)
+SRCS		= $(addprefix srcs/, calcul.c main.c str.c)
 OBJS		= $(SRCS:.c=.o)
 INCL		= includes
 NAME		= netwhat
