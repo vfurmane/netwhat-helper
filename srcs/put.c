@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 12:42:04 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/27 13:11:26 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/01/27 17:11:38 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,6 @@ void	ft_print_results(int cidr, int netmask[4])
 
 int		ft_usage(const char *message, const char *name)
 {
-	printf("%s\n\nUsage: ./%s netmask", message, name);
+	printf("%s\nUsage: ./%s netmask\n", message, name);
 	return (1);
 }

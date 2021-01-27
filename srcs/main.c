@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 15:26:51 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/27 13:08:26 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/01/27 17:11:26 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ int	main(int argc, char **argv)
 	int	cidr;
 	int	netmask[4];
 	
+	ft_intro();
 	if (argc != 2)
 		return (ft_usage("Wrong number of arguments !\n", basename(argv[0])));
-	ft_intro();
 	cidr = ft_init(argc, argv, netmask);
 	if (cidr < 0)
 		return (ft_error(cidr));
