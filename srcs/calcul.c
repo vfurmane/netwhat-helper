@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 18:22:01 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/26 21:12:01 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/01/27 18:30:17 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,9 @@ int	ft_fill_netmask(char *str, int netmask[4])
 		netmask[i] = ft_atoi(str);
 		if (netmask[i] < 0 || netmask[i] > 255)
 			return (-1);
-		while (*str && ((*str >= '0' && *str <= '0') || *str == '.'))
-			(*str)++;
+		while (*str && *str >= '0' && *str <= '9')
+			str++;
+		str++;
 		i++;
 	}
 	return (0);
@@ -44,13 +45,12 @@ int	ft_calculate_cidr(char *str, int netmask[4])
 	{
 		j = 0;
 		nbr = netmask[i];
-		while (j < 8)
+		while (j++ < 8)
 		{
-			if ((netmask[i] & 128) != 128)
+			if ((nbr & 128) != 128)
 				return (cidr);
 			nbr <<= 1;
 			cidr++;
-			j++;
 		}
 		i++;
 	}
@@ -72,8 +72,9 @@ int	ft_calculate_netmask(char *str, int netmask[4])
 		nbr = 0;
 		while (j < 8 && i * 8 + j < cidr)
 		{
-			nbr <<= 1;
-			nbr &= 1;
+			nbr >>= 1;
+			nbr |= 128;
+			j++;
 		}
 		netmask[i] = nbr;
 		i++;
