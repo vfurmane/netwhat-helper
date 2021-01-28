@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 12:42:04 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/27 20:05:39 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/01/28 10:03:35 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ void	ft_intro(void)
 ------------+\n");
 	printf("|%78s|\n", "");
 	printf("|%78s|\n", "");
-	printf("|%26sNETWHAT HELPER by vfurmane%26s|\n", "", "");
+	printf("|%26s%s by %s%26s|\n", "",\
+			UNDERLINE(MAGENTA("NETWHAT HELPER")), YELLOW("vfurmane"), "");
 	printf("|%78s|\n", "");
 	printf("|%78s|\n", "");
 	printf("+------------------------------------------------------------------\
