@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 12:42:04 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/28 10:03:35 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/01/28 10:23:29 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,8 @@ void	ft_print_results(int cidr, int netmask[4])
 	char	*str_netmask;
 
 	str_netmask = ft_format_ip_address(netmask);
-	printf("        IP      :   %-15s        CIDR    :   %d\n                  \
-                         MASK    :   %s\n", "undefined", cidr, str_netmask);
+	printf("        %s      :   %-15s        %s    :   %d\n                  \
+                         %s    :   %s\n", RED("IP"), "undefined", RED("CIDR"), cidr, BRIGHT_RED("MASK"), str_netmask);
 	free(str_netmask);
 	//printf("%d\n%d\n%d\n%d\n%d\n", cidr, netmask[0], netmask[1], netmask[2], netmask[3]);
 }

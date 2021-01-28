@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 20:41:16 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/28 10:00:13 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/01/28 10:21:06 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@
 # include <stdlib.h>
 
 # define UNDERLINE(str)	"\033[4m" str "\033[0m"
+# define RED(str)	"\033[31m" str "\033[0m"
 # define YELLOW(str)	"\033[33m" str "\033[0m"
 # define MAGENTA(str)	"\033[35m" str "\033[0m"
+# define BRIGHT_RED(str)	"\033[91m" str "\033[0m"
 
 /*
 ** --------------------------------[ calcul.c ]---------------------------------
