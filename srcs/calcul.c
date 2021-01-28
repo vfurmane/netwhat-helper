@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 18:22:01 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/27 18:30:17 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/01/28 10:05:38 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,8 @@ int	ft_calculate_netmask(char *str, int netmask[4])
 
 	i = 0;
 	cidr = ft_atoi(str);
+	if (cidr < 1 || cidr > 32)
+		return (-1);
 	while (i < 4)
 	{
 		j = 0;
